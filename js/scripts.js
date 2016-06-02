@@ -86,7 +86,7 @@ $(function() {
 //geting mouse position in relation to div
 var divPos = {};
 $(document).mousemove(function(e){
-    var offset = $('#first').offset();
+    var offset = $('#map-container').offset();
     divPos = {
         left: e.pageX - offset.left,
         top: e.pageY  - offset.top
