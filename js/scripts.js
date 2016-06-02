@@ -78,8 +78,7 @@ $(function() {
       var clickedLatLng = map.getProjection().fromPointToLatLng(new google.maps.Point(pointX, pointY));
      
       //prints position in other div
-      console.log(clickedLatLng.lng());
-       $("#position").html('x: ' + clickedLatLng.lat() + ' y: ' + clickedLatLng.lng());
+      $("#position").html('x: ' + clickedLatLng.lat() + ' y: ' + clickedLatLng.lng());
     });
 });
 
