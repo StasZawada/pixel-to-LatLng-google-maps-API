@@ -66,7 +66,7 @@ $(function() {
       var swBoundInP = map.getProjection().fromLatLngToPoint(swBound);
       var click = map.getProjection().fromLatLngToPoint(event.latLng);
       
-      // gets pixel value of map size (size of map div) and calculates factor for conversion to google map points (it's probably easier just to take it from map's zoom value)
+      // gets pixel value of map size (size of map div) and calculates factor for conversion to google map points (it's probably easier just to take it from map's zoom value [Math.pow(2, map.getZoom())])
       var xRight = document.getElementById("map-container").offsetWidth;
       var factor = xRight / (neBoundInP.x - swBoundInP.x);
   
