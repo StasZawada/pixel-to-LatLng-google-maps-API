@@ -73,17 +73,12 @@ $(function() {
       // gets mouse position in Google Map points
       var pointX = (divPos.left/factor) + swBoundInP.x;
       var pointY = (divPos.top/factor) + neBoundInP.y;
-      
-        // gets mouse position in px (calculated from google maps points)
-      var x = Math.round((click.x - swBoundInP.x)*factor);
-      var y = Math.round((click.y - neBoundInP.y)*factor);
-  
-  
+
       //switches it to LatLng object
       var clickedLatLng = map.getProjection().fromPointToLatLng(new google.maps.Point(pointX, pointY));
      
       //prints position in other div
-      $("#position").html('x: ' + clickedLatLng.lat() + ' y: ' + clickedLatLng.lng() + '<br> in px x: ' + x + ' y: ' + y);
+      $("#position").html('x: ' + clickedLatLng.lat() + ' y: ' + clickedLatLng.lng());
     });
 });
 
